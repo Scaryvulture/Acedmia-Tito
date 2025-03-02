@@ -72,8 +72,6 @@ h3{
 
 /*Navbar Bootstrap*/
 .navbar {
-    z-index: 3;
-    position: relative;
     background-color: #4A90E2 !important;
     margin-top: 50px;
     margin-bottom: 0px;
