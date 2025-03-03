@@ -1,0 +1,54 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Estilos generales del footer
+footer {
+    background-color: $primary-color;
+    color: $white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+// Contenedor principal del footer
+.footer-container {
+    @extend %flex-center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: $container-width;
+    margin: auto;
+}
+
+// Columnas del footer
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: $base-padding;
+    align-items: center;
+    min-width: 250px;
+    text-align: center;
+
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+}
+
+// Estilos de iconos sociales
+.social {
+    list-style: none;
+    @extend %flex-center;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}

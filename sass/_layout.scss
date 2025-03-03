@@ -1,0 +1,49 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Contenedor general para todas las secciones
+.container-box {
+    opacity: 0; // Inicialmente oculto
+    animation: fadeIn 1s ease-out forwards;
+    display: flex;
+    background-color: $white;
+    width: 100%;
+    max-width: $max-width;
+    @extend %flex-center; // Usa el extend en lugar de repetir estilos
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: $border-radius;
+    @include box-shadow(rgba($black, 0.1));
+
+    p {
+        max-width: 900px; // Limita solo el ancho de los textos dentro del contenedor
+        text-align: center;
+    }
+}
+
+// Grillas de contenido
+.container_test {
+    align-self: stretch;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: $container-width;
+    margin: auto;
+
+    article {
+        width: 30%;
+        text-align: center;
+
+        img {
+            width: 100%;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+

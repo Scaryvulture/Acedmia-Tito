@@ -1,0 +1,73 @@
+// Flexbox centrado
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center {
+    @extend %flex-center;
+}
+
+// Grid centrado
+%grid-center {
+    display: grid;
+    place-items: center;
+}
+
+@mixin grid-center {
+    @extend %grid-center;
+}
+
+// Estilos base de botones (para extender en otros archivos)
+%button-base {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: $border-radius;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+@mixin button-style($bg-color, $hover-color, $text-color: white) {
+    @extend %button-base;
+    background-color: $bg-color;
+    color: $text-color;
+
+    &:hover {
+        background-color: $hover-color;
+        transform: scale(1.05);
+        border-color: $text-color;
+    }
+}
+
+// Mixin para aplicar sombras
+@mixin box-shadow($color: rgba($black, 0.1), $x: 0px, $y: 4px, $blur: 6px) {
+    box-shadow: $x $y $blur $color;
+}
+
+// Media queries responsivos
+@mixin mobile {
+    @media (max-width: $mobile) { @content; }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) { @content; }
+}
+
+@mixin desktop {
+    @media (max-width: $desktop) { @content; }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

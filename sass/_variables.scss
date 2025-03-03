@@ -1,0 +1,27 @@
+// 🎨 Paleta de colores
+$primary-color: #4A90E2;  // Azul principal
+$secondary-color: #F4E1D2; // Beige secundario
+$text-color: #333;         // Color de texto principal
+$button-hover: #357ABD;    // Color hover de botones
+$white: #ffffff;           // Blanco
+$black: #000000;           // Negro
+
+// 📏 Espaciados y medidas
+$base-padding: 10px;   // Padding base para elementos
+$base-margin: 10px;    // Margen base para elementos
+$border-radius: 5px;   // Radio de borde estándar
+
+// 📏 Anchos máximos y contenedores
+$container-width: 1200px; // Ancho máximo para el contenedor principal
+$max-width: 90%;         // Ancho máximo relativo para contenedores internos
+
+// 🎭 Tipografías
+$font-primary: 'Montserrat', sans-serif; // Fuente principal
+$font-secondary: 'Overpass', sans-serif; // Fuente secundaria
+$base-font-size: 16px;  // Tamaño de fuente base
+$heading-font-weight: bold; // Peso de los encabezados
+
+// 📏 Breakpoints para responsive design
+$mobile: 768px;   // Tamaño máximo para móviles
+$tablet: 1024px;  // Tamaño máximo para tablets
+$desktop: 1200px; // Tamaño máximo para escritorio

@@ -1,0 +1,18 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Estilos generales para botones
+.boton {
+    @extend %button-base;
+    @include button-style($primary-color, $button-hover);
+    margin: $base-margin 0;
+
+    &:hover {
+        background-color: $button-hover;
+        color: $white;
+        border-color: $white;
+        transform: scale(1.05);
+    }
+}
+
