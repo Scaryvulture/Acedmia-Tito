@@ -1,0 +1,163 @@
+// Importar variables
+@import "variables";
+
+// Estilos responsivos para dispositivos móviles
+@include mobile {
+    body {
+        font-size: 14px;
+    }
+
+    // Navbar
+    .navbar {
+        padding: 5px;
+
+        .navbar-nav {
+            .nav-item {
+                margin: 5px 0;
+
+                .nav-link {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // Headers responsivos
+    #header_index,
+    #header_blog,
+    #header_servicios,
+    #header_nosotros,
+    #header_contacto {
+        height: 250px;
+    }
+
+    // Sección de testimonios
+    .container_test {
+        flex-direction: column;
+        align-items: center;
+        width: 90%; 
+        max-width: 400px; 
+        margin: auto; 
+
+        article {
+            width: 90%;
+            max-width: 450px;
+        }
+
+        .testimonio {
+            text-align: center;
+            padding: 15px;
+
+            img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    // Sección de servicios
+    .container-services,
+    .planes-container,
+    .servicios-personalizados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicio,
+    .planes-lista,
+    .planes-info,
+    .servicios-personalizados .servicios-item {
+        width: 90% !important;
+        max-width: 450px;
+    }
+
+    // Blog
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    // Contacto
+    .formulario-contacto {
+        width: 100%;
+    }
+
+    .mapa-contacto {
+        width: 90%;
+        height: 300px;
+    }
+
+    .social-ctc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // Footer
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-div {
+        width: 100%;
+    }
+
+    // Ajustes para botones
+    .boton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    // Ajustes para la imagen principal en index
+    .image-overlay {
+        height: 350px;
+
+        .overlay-content {
+            padding: 10px;
+        }
+    }
+
+    // Ajustes para Nosotros
+    .historia-container img {
+        width: 90%;
+    }
+
+    .equipo-container,
+    .certificaciones-container {
+        flex-direction: column;
+    }
+
+    .equipo-container .equipo-item,
+    .certificaciones-container img {
+        width: 80%;
+    }
+}
+
+// Estilos responsivos para tabletas
+@include tablet {
+    .container-box {
+        padding: 20px;
+    }
+
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planes-lista {
+        width: 80%;
+    }
+
+    .planes-info {
+        width: 90%;
+    }
+}
+
+// Estilos responsivos para escritorio grande
+@include desktop {
+    .container-box {
+        max-width: 1100px;
+    }
+}

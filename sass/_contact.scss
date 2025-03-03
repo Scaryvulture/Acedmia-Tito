@@ -1,0 +1,94 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Contenedor del formulario de contacto
+.formulario-contacto {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+
+    label {
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        font-size: 16px;
+    }
+
+    button {
+        @extend %button-base;
+        @include button-style($primary-color, $button-hover);
+        width: 100%;
+    }
+}
+
+// Información de contacto
+.info-contacto {
+    text-align: center;
+    margin-top: 20px;
+
+    p {
+        font-size: 16px;
+        color: $text-color;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+
+        &:hover {
+            color: $button-hover;
+        }
+    }
+}
+
+// Redes sociales en la sección de contacto
+.social-ctc {
+    list-style: none;
+    @extend %flex-center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 10px;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $text-color;
+            font-weight: bold;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    }
+}
+
+// Mapa interactivo
+.mapa-contacto {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: $border-radius;
+    @include box-shadow(rgba($black, 0.1));
+}

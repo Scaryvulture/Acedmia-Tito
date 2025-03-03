@@ -1,0 +1,130 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Sección de servicios
+.container-services {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: $container-width;
+    margin: auto;
+}
+
+// Tarjetas de servicio
+.servicio {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 30%;
+    background-color: $white;
+    text-align: center;
+    padding: 20px;
+    border-radius: $border-radius;
+    @include box-shadow(rgba($black, 0.1));
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    img {
+        width: 100%;
+        border-radius: $border-radius;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: $text-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        color: darken($text-color, 20%);
+        margin-bottom: 15px;
+    }
+
+    .boton {
+        @extend %button-base;
+        @include button-style($primary-color, $button-hover);
+    }
+}
+
+// Sección de servicios personalizados
+.servicios-personalizados {
+    @extend %flex-center;
+    gap: 20px;
+    margin-top: 20px;
+
+    .servicios-item {
+        position: relative;
+        width: 45%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: $border-radius;
+        @include box-shadow(rgba($black, 0.1));
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .servicios-texto {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background: rgba($black, 0.6);
+            color: $white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 0 0 $border-radius $border-radius;
+        }
+    }
+}
+
+// Sección de planes y precios
+.planes-container {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+
+    .planes-lista {
+        background-color: lighten($secondary-color, 10%);
+        padding: 15px;
+        border-radius: $border-radius;
+        @include box-shadow(rgba($black, 0.1));
+        list-style: none;
+        width: 30%;
+
+        li {
+            background-color: $primary-color;
+            color: $white;
+            padding: 10px;
+            margin: 5px 0;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    }
+
+    .planes-info {
+        width: 60%;
+        text-align: center;
+
+        p {
+            font-size: 16px;
+            color: $text-color;
+            margin-bottom: 15px;
+        }
+
+        .boton {
+            @extend %button-base;
+            @include button-style($primary-color, $button-hover);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Importar estilos globales y estructura general
+@import "global";
+@import "layout";
+
+// Importar componentes
+@import "header";
+@import "footer";
+@import "buttons";
+
+// Importar páginas específicas
+@import "index";
+@import "services";
+@import "blog";
+@import "contact";
+@import "nosotros";
+
+// Importar ajustes responsivos
+@import "responsive";

@@ -1,0 +1,59 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Estilos generales del body
+body {
+    font-family: $font-primary;
+    font-size: $base-font-size;
+    line-height: 1.6;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    overflow-x: hidden; // Evitar scroll horizontal en mobile
+}
+
+// Títulos generales
+h1, h2, h3 {
+    font-weight: $heading-font-weight;
+    text-align: center;
+    color: $text-color;
+}
+
+// Contenedor general
+.container {
+    max-width: $container-width;
+    width: $max-width;
+    margin: 0 auto;
+    padding: $base-padding;
+}
+
+// Enlaces
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $button-hover;
+    }
+}
+
+// Clases de utilidad
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// Clases de alineación usando mixins
+.flex-center {
+    @extend %flex-center;
+}
+
+.grid-center {
+    @extend %grid-center;
+}

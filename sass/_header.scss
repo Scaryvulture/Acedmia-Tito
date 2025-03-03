@@ -1,0 +1,81 @@
+// Importar variables y mixins
+@import "variables";
+@import "mixins";
+
+// Navbar (Menú de navegación)
+.navbar {
+    background-color: $primary-color;
+    z-index: 3;
+    position: relative;
+    padding: $base-padding;
+
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            margin: 0 $base-margin;
+
+            .nav-link {
+                color: $white;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $button-hover;
+                }
+
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Headers con imágenes de fondo
+%header-base {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    @extend %flex-center;
+    flex-direction: column;
+    text-align: center;
+    color: $black;
+    padding: 40px 0;
+}
+
+// Extender a cada página
+#header_index {
+    @extend %header-base;
+    background-image: url("../images/Banner1.jpeg");
+}
+
+#header_blog {
+    @extend %header-base;
+    background-image: url("../images/banner2.jpeg");
+}
+
+#header_servicios {
+    @extend %header-base;
+    background-image: url("../images/banner3.jpg");
+}
+
+#header_nosotros {
+    @extend %header-base;
+    background-image: url("../images/banner4.jpg");
+}
+
+#header_contacto {
+    @extend %header-base;
+    background-image: url("../images/banner5.jpg");
+}
+
+
