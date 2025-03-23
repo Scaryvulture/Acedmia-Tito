@@ -44,7 +44,6 @@
     }
 
     .boton {
-        @extend %button-base;
         @include button-style($primary-color, $button-hover);
     }
 }

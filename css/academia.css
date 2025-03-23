@@ -152,7 +152,7 @@ a:hover {
   text-align: center;
 }
 
-.container_test {
+.container-test {
   align-self: stretch;
   display: flex !important;
   flex-wrap: wrap;
@@ -161,11 +161,11 @@ a:hover {
   max-width: 1200px;
   margin: auto;
 }
-.container_test article {
+.container-test article {
   width: 30%;
   text-align: center;
 }
-.container_test article img {
+.container-test article img {
   width: 100%;
   border-radius: 5px;
 }
@@ -241,7 +241,7 @@ a:hover {
 }
 
 #header_index {
-  background-image: url("../images/Banner1.jpeg");
+  background-image: url("../images/banner1.jpeg");
 }
 
 #header_blog {
@@ -460,7 +460,7 @@ footer {
   margin: 10px auto;
 }
 .container-test .testimonio img {
-  max-width: 350 px;
+  max-width: 350px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
@@ -977,22 +977,22 @@ footer {
   #header_contacto {
     height: 250px;
   }
-  .container_test {
+  .container-test {
     flex-direction: column;
     align-items: center;
     width: 90%;
     max-width: 400px;
     margin: auto;
   }
-  .container_test article {
+  .container-test article {
     width: 90%;
     max-width: 450px;
   }
-  .container_test .testimonio {
+  .container-test .testimonio {
     text-align: center;
     padding: 15px;
   }
-  .container_test .testimonio img {
+  .container-test .testimonio img {
     max-width: 150px;
   }
   .container-services,

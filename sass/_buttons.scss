@@ -4,7 +4,6 @@
 
 // Estilos generales para botones
 .boton {
-    @extend %button-base;
     @include button-style($primary-color, $button-hover);
     margin: $base-margin 0;
 
